@@ -1,111 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@drawable/b2">
 
     <TextView
+        android:id="@+id/place"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:width="200dp"
         android:layout_marginTop="25dp"
+        android:width="200dp"
+        android:gravity="center"
         android:text="Place"
-        android:id="@+id/place"
-        android:textSize="50dp"
-        android:gravity="center"/>
+        android:textColor="#c3c2c2"
+        android:textSize="50dp" />
+
     <TextView
+        android:id="@+id/last_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/place"
         android:layout_marginTop="15dp"
+        android:gravity="center"
         android:text="Last Update:"
-        android:textSize="15dp"
-        android:id="@+id/last_update"
-        android:gravity="center"/>
+        android:textColor="#c3c2c2"
+        android:textSize="15dp" />
+
     <TextView
+        android:id="@+id/date_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/last_update"
-        android:id="@+id/date_time"
-        android:text="Date_time"
         android:gravity="center"
-        />
+        android:text="Date_time"
+        android:textColor="#c3c2c2" />
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="75dp"
-        android:layout_height="74dp"
+        android:layout_width="105dp"
+        android:layout_height="103dp"
         android:layout_below="@id/date_time"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
-        android:background="#FFFFFF" />
+        android:layout_marginTop="25dp" />
+
     <TextView
+        android:id="@+id/temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="202dp"
         android:width="250dp"
-        android:id="@+id/temperature"
-        android:text="temperature"
-        android:layout_toRightOf="@id/icon"
-        android:layout_below="@id/date_time"
-        android:layout_marginTop="37dp"
         android:gravity="center"
-        android:textSize="40dp"
-        />
+        android:text="temp"
+        android:textColor="#c3c2c2"
+        android:textSize="60dp" />
+
     <TextView
+        android:id="@+id/sunrise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/icon"
-        android:text="Sunrise"
-        android:id="@+id/sunrise"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
-        android:textSize="20dp"/>
+        android:text="Sunrise"
+        android:textColor="#c3c2c2"
+        android:textSize="20dp" />
+
     <TextView
+        android:id="@+id/sunset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/icon"
-        android:text="Sunset"
-        android:id="@+id/sunset"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="20dp"
-        android:textSize="20dp"/>
+        android:text="Sunset"
+        android:textColor="#c3c2c2"
+        android:textSize="20dp" />
+
     <TextView
+        android:id="@+id/pressure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pressure"
-        android:id="@+id/pressure"
         android:layout_below="@id/sunrise"
         android:layout_marginTop="30dp"
-        android:textSize="25dp"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:text="Pressure"
+        android:textColor="#c3c2c2"
+        android:textSize="25dp" />
+
     <TextView
+        android:id="@+id/humidity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Humidity"
-        android:id="@+id/humidity"
         android:layout_below="@id/pressure"
         android:layout_marginTop="30dp"
-        android:textSize="25dp"
         android:gravity="center_horizontal"
-        />
+        android:text="Humidity"
+        android:textColor="#c3c2c2"
+        android:textSize="25dp" />
+
     <TextView
+        android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/description"
-        android:text="Description"
         android:layout_below="@id/humidity"
         android:layout_marginTop="30dp"
-        android:textSize="25dp"
         android:gravity="center_horizontal"
-        />
+        android:text="Description"
+        android:textColor="#c3c2c2"
+        android:textSize="25dp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/refresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Refresh"
-        android:layout_below="@+id/description"
-        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_marginBottom="29dp"
+        app:srcCompat="@drawable/refresh"
+        tools:ignore="VectorDrawableCompat" />
+
 </RelativeLayout>

@@ -36,6 +36,5 @@ public class LocationCoords implements LocationListener{
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
-        Log.d("Latitude","status");
     }
 }
